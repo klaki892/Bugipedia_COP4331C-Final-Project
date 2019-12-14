@@ -33,6 +33,17 @@ http {
     keepalive_timeout 5;
     client_max_body_size <%= ENV['NGINX_CLIENT_MAX_BODY_SIZE'] || 1 %>M;
 
-    root frontend; # path to your app
+    location / {
+            root frontend;
+            # First attempt to serve request as file, then
+            # as directory, then fall back to displaying a 404.
+            try_files $uri $uri/ =404;
+    }
+
+    error_page 404 /404.html;
+    location = /404.html {
+            root frontend;
+            internal;
+    }
   }
 }
