@@ -1,1 +1,1 @@
-web: bin/start-nginx uwsgi api/app.ini
+web: bin/start-nginx-solo
