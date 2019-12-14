@@ -2,3 +2,4 @@ uwsgi
 werkzeug
 flask
 flask_restful
+sqlalchemy
