@@ -20,3 +20,4 @@ SQLAlchemy==1.2.16
 uWSGI==2.0.17.1
 Werkzeug==0.14.1
 wheel==0.32.3
+psycopg2==2.8.4
