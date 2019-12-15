@@ -10,7 +10,7 @@ from database.db import  getSession
 from flask_cors import CORS
 
 app = Flask(__name__)
-app.config.from_pyfile('api.cfg')
+app.config.from_pyfile('api.cfg.example')
 api = Api(app)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
